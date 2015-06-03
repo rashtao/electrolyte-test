@@ -1,0 +1,15 @@
+{
+  "name": "electrolyte-test",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "electrolyte": "file:../electrolyte"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "chai": "latest",
+    "grunt": "latest",
+    "grunt-cli": "latest",
+    "grunt-mocha-test": "latest"
+  }
+}

@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "electrolyte": "file:../electrolyte"
+    "electrolyte": "file:../electrolyte",
+    "electrolyte-test-dep": "file:../electrolyte-test-dep"
   },
   "devDependencies": {
     "mocha": "latest",

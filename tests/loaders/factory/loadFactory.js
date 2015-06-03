@@ -3,11 +3,11 @@ var IoC = require('electrolyte');
 
 var expect = require('chai').expect;
 
-before(function () {
-	IoC.loader("factory", IoC.node("tests/injectables/annotated/factory"));
-});
 
-describe('factoryWithoutDeps', function () {
+describe.skip('factoryWithoutDeps', function () {
+	before(function () {
+		IoC.loader("factory", IoC.node("tests/injectables/annotated/factory"));
+	});
 	it('instanceOf', function () {
 		expect(IoC.create("factory/MyObj1Factory")).to.be.instanceof(require("../../injectables/annotated/constructor/MyObj1"));
 	});

@@ -4,7 +4,7 @@ var IoC = require('electrolyte');
 var expect = require('chai').expect;
 
 
-describe.skip('factoryWithoutDeps', function () {
+describe('factoryWithoutDeps', function () {
 	before(function () {
 		IoC.loader("factory", IoC.node("tests/injectables/annotated/factory"));
 	});

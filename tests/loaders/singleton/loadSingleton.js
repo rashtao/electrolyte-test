@@ -4,7 +4,7 @@ var IoC = require('electrolyte');
 var expect = require('chai').expect;
 
 
-describe.skip('registerSingletonWithoutDeps', function () {
+describe('registerSingletonWithoutDeps', function () {
 	before(function () {
 		IoC.loader("singleton", IoC.node("tests/injectables/annotated/singleton"));
 		IoC.create("singleton/service1");

@@ -3,7 +3,7 @@ var IoC = require('electrolyte');
 
 var expect = require('chai').expect;
 
-describe.skip('constructorWithoutDeps', function () {
+describe('constructorWithoutDeps', function () {
 	before(function () {
 		IoC.loader("constructor", IoC.node("tests/injectables/annotated/constructor"));
 	});

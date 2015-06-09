@@ -3,7 +3,7 @@ var IoC = require('electrolyte');
 
 var expect = require('chai').expect;
 
-describe.skip('literal', function () {
+describe('literal', function () {
 	before(function () {
 		IoC.loader("literal", IoC.node("tests/injectables/annotated/literal"));
 	});

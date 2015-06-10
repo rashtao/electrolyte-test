@@ -4,11 +4,12 @@ var IoC = require('electrolyte');
 var expect = require('chai').expect;
 
 
-describe('registerSingletonWithoutDeps', function () {
-	before(function () {
-		IoC.loader("singleton", IoC.node("tests/injectables/annotated/singleton"));
-		IoC.create("singleton/service1");
-	});
+before(function () {
+	IoC.loader("singleton", IoC.node("tests/injectables/annotated/singleton"));
+	IoC.create("singleton/service1");
+});
+
+describe('loadSingleton', function () {
 	it('instancesEquality', function () {
 		expect(IoC.create("singleton/service1")).to.eql(require("../../injectables/annotated/singleton/service1")());
 		expect(IoC.create("singleton/service1")).to.eql(IoC.create("singleton/service1"));

@@ -1,8 +1,8 @@
-exports = module.exports = function (MyObj1, id) {
+exports = module.exports = function (id) {
 	this.id = id;
-	this.MyObj1 = MyObj1;
-	this.name = "constructor/MyObj3";
+	this.name = "MyObj3";
 };
 
 exports['@constructor'] = true;
-exports['@require'] = ['constructor/MyObj1'];
+exports['@require'] = ['MyObj1'];
+exports['@type'] = 'setter';

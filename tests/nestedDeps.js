@@ -9,13 +9,13 @@ before(function () {
 	IoC.factory("depA", require("./injectables/annotated/nestedDeps/depA"));
 	IoC.factory("depB", require("./injectables/annotated/nestedDeps/depB"));
 	IoC.factory("depC", require("./injectables/annotated/nestedDeps/depC"));
-	IoC.factory("depA/depB/depC", require("./injectables/annotated/nestedDeps/depX"));
+	IoC.factory("depA.depB.depC", require("./injectables/annotated/nestedDeps/depX"));
 
 });
 
 describe('nestedDeps', function () {
 	it('instancesEquality', function () {
-		expect(IoC.create("depA").B.C).to.eql(IoC.create("depA/depB/depC"));
+		expect(IoC.create("depA").B.C).to.eql(IoC.create("depA.depB.depC"));
 		expect(IoC.create("depB").C).to.eql(IoC.create("depC"));
 		expect(IoC.create("depC")).to.eql(require("./injectables/annotated/nestedDeps/depC")());
 	});

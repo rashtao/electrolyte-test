@@ -4,4 +4,4 @@ exports = module.exports = {
 
 exports['@literal'] = true;
 exports["@require"] = ["config1"];
-exports["@type"] = "setter";
+exports["@type"] = "setterInjection";

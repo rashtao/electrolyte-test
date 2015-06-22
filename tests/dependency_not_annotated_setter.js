@@ -7,7 +7,7 @@ var myInj = {myInjectedDep: "myInjectedDep"};
 
 before(function () {
     IoC.register("NestedDependency", myInj, "@literal");
-    IoC.singleton("test-dep", require("electrolyte-test-dep").NotAnnotatedSetter, ["NestedDependency"], "setter");
+    IoC.singleton("test-dep", require("electrolyte-test-dep").NotAnnotatedSetter, ["NestedDependency"], "setterInjection");
 });
 
 describe('injectIntoDependencyNotAnnotatedSetter', function () {

@@ -6,7 +6,7 @@ var expect = require('chai').expect;
 before(function () {
 	IoC.factory("MyObj1Factory", require("../../injectables/not_annotated/factory/MyObj1Factory"));
 	IoC.factory("MyObj2Factory", require("../../injectables/not_annotated/factory/MyObj2Factory"));
-	IoC.factory("MyObj3Factory", require("../../injectables/not_annotated/factory/MyObj3Factory"), ["MyObj2Factory"], "setter");
+	IoC.factory("MyObj3Factory", require("../../injectables/not_annotated/factory/MyObj3Factory"), ["MyObj2Factory"], "setterInjection");
 });
 
 describe('factoryNotAnnotated_setter', function () {

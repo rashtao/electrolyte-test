@@ -8,4 +8,4 @@ exports = module.exports = function () {
 
 exports['@singleton'] = true;
 exports['@require'] = ['depB'];
-exports['@type'] = 'setter';
+exports['@type'] = 'setterInjection';

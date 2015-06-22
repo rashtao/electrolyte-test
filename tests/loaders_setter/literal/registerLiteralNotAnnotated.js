@@ -12,7 +12,7 @@ c2 = JSON.parse(JSON.stringify(c2));
 
 before(function () {
 	IoC.register("config1", c1, "@literal");
-	IoC.register("config2", c2, ["config1"], "@literal", "setter");
+	IoC.register("config2", c2, ["config1"], "@literal", "setterInjection");
 });
 
 describe('registerLiteralNotAnnotated_setter', function () {

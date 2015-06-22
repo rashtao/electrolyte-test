@@ -5,4 +5,4 @@ exports = module.exports = function (id) {
 
 exports['@constructor'] = true;
 exports['@require'] = ['MyObj1'];
-exports['@type'] = 'setter';
+exports['@type'] = 'setterInjection';

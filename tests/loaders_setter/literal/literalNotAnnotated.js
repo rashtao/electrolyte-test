@@ -12,7 +12,7 @@ c2 = JSON.parse(JSON.stringify(c2));
 
 before(function () {
 	IoC.literal("config1", c1);
-	IoC.literal("config2", c2, ["config1"], "setter");
+	IoC.literal("config2", c2, ["config1"], "setterInjection");
 });
 
 describe('literalNotAnnotated_setter', function () {

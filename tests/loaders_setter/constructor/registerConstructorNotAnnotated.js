@@ -4,9 +4,9 @@ var IoC = require('electrolyte');
 var expect = require('chai').expect;
 
 before(function () {
-	IoC.register("MyObj1", require("../../injectables/not_annotated/constructor/MyObj1"), "@constructor", "setter");
-	IoC.register("MyObj2", require("../../injectables/not_annotated/constructor/MyObj2"), "@constructor", "setter");
-	IoC.register("MyObj3", require("../../injectables/not_annotated/constructor/MyObj3"), ["MyObj2"], "@constructor", "setter");
+	IoC.register("MyObj1", require("../../injectables/not_annotated/constructor/MyObj1"), "@constructor", "setterInjection");
+	IoC.register("MyObj2", require("../../injectables/not_annotated/constructor/MyObj2"), "@constructor", "setterInjection");
+	IoC.register("MyObj3", require("../../injectables/not_annotated/constructor/MyObj3"), ["MyObj2"], "@constructor", "setterInjection");
 });
 
 describe('registerConstructorNotAnnotated_setter', function () {

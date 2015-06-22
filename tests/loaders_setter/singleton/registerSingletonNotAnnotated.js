@@ -4,8 +4,8 @@ var IoC = require('electrolyte');
 var expect = require('chai').expect;
 
 before(function () {
-	IoC.register("service1", require("../../injectables/not_annotated/singleton/service1"), null, "@singleton", "setter");
-	IoC.register("service3", require("../../injectables/not_annotated/singleton/service3"), ["service1"], "@singleton", "setter");
+	IoC.register("service1", require("../../injectables/not_annotated/singleton/service1"), null, "@singleton", "setterInjection");
+	IoC.register("service3", require("../../injectables/not_annotated/singleton/service3"), ["service1"], "@singleton", "setterInjection");
 });
 
 describe('registerSingletonNotAnnotated_setter', function () {

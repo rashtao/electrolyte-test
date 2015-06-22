@@ -6,7 +6,7 @@ var expect = require('chai').expect;
 before(function () {
 	IoC.constructor("MyObj1", require("../../injectables/not_annotated/constructor/MyObj1"));
 	IoC.constructor("MyObj2", require("../../injectables/not_annotated/constructor/MyObj2"));
-	IoC.constructor("MyObj3", require("../../injectables/not_annotated/constructor/MyObj3"), ["MyObj2"], "setter");
+	IoC.constructor("MyObj3", require("../../injectables/not_annotated/constructor/MyObj3"), ["MyObj2"], "setterInjection");
 });
 
 describe('constructorNotAnnotated_setter', function () {

@@ -7,4 +7,4 @@ exports = module.exports = function () {
 
 exports['@factory'] = true;
 exports['@require'] = ['MyObj1Factory'];
-exports['@type'] = 'setter';
+exports['@type'] = 'setterInjection';

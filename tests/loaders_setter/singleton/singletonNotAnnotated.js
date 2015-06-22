@@ -5,7 +5,7 @@ var expect = require('chai').expect;
 
 before(function () {
 	IoC.singleton("service1", require("../../injectables/not_annotated/singleton/service1"));
-	IoC.singleton("service3", require("../../injectables/not_annotated/singleton/service3"), ["service1"], "setter");
+	IoC.singleton("service3", require("../../injectables/not_annotated/singleton/service3"), ["service1"], "setterInjection");
 });
 
 describe('singletonNotAnnotated_setter', function () {

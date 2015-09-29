@@ -10,7 +10,6 @@ before(function () {
 });
 
 describe('optionalDeps', function () {
-    // TODO: implement chacks on all the fields
 
     it('injectedEquality', function () {
         expect(IoC.create("singleton/service3").service1).to.eql(require("./injectables/optional/singleton/service1")());
@@ -22,7 +21,6 @@ describe('optionalDeps', function () {
         expect(IoC.create("singleton/service3").service1).to.equal(IoC.create("singleton/service1"));
         expect(IoC.create("singleton/service3").service2).to.equal(IoC.create("singleton/service2"));
     });
-
 
 });
 
